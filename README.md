@@ -227,3 +227,12 @@ Customers + Orders + Payments
 Upon completion, this project will provide a comprehensive analytical view of customer behavior, product performance, seller contribution, operational efficiency, and sales performance within an e-commerce environment.
 
 The resulting insights will support data-driven decision-making across customer retention, product strategy, marketing optimization, seller management, and operational planning.
+
+## Dataset
+
+This project uses the Olist Brazilian E-Commerce Dataset.
+
+Download:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+After downloading, place all CSV files in a local `data/` folder before running the notebook.
