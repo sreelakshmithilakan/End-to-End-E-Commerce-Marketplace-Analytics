@@ -109,7 +109,8 @@ Customers were initially evaluated using the Recency, Frequency, and Monetary (R
 * As a result, customer segmentation was driven primarily by Recency and Monetary dimensions.
 * Repeat purchase behavior remained relatively low across the marketplace.
 * Customer retention emerged as one of the largest opportunities for long-term growth.
-* 
+
+
 **Analytical Note**
 
 Due to the highly skewed purchase frequency distribution, Frequency provided limited segmentation value in this dataset. Consequently, customer analysis focused primarily on Recency and Monetary behavior, while Frequency was examined separately through retention and repeat-purchase analysis.
@@ -118,6 +119,15 @@ Due to the highly skewed purchase frequency distribution, Frequency provided lim
 ### Recency vs Monetary Customer Distribution
 
 <img width="1340" height="448" alt="newplot (22)" src="https://github.com/user-attachments/assets/46dbd6e1-faa9-4fe0-a05b-4f5c0adf8e00" />
+
+#### Methodology
+
+- Customers were scored using a simplified RFM framework.
+- Due to extremely low repeat purchase behavior (approximately 97% of customers placed only one order), Frequency was excluded from this visualization.
+- Recency scores were assigned using quintiles (1–5) based on days since the most recent purchase.
+- Monetary scores were assigned using quintiles (1–5) based on total customer spending.
+- The heatmap displays the number of customers within each Recency–Monetary score combination.
+
 
 **Insight**
 
@@ -129,6 +139,22 @@ Prioritize retention and re-engagement strategies for customers with declining r
 ### Customer Value Segmentation
 
 <img width="1340" height="525" alt="newplot (21)" src="https://github.com/user-attachments/assets/54792b95-eab3-459e-b8a5-befca46581d3" />
+
+
+#### Methodology
+
+Customers were segmented using Recency and Monetary scores.
+
+| Segment | Definition |
+|----------|------------|
+| Champion | High spending, highly recent customers |
+| Potential Loyalist | Recent customers with moderate-to-high spending |
+| Regular Customer | Average recency and spending behavior |
+| At Risk | Previously valuable customers showing declining activity |
+| Lost Customer | Customers with low recent engagement |
+
+*Frequency was not a significant segmentation driver due to the marketplace's very low repeat purchase rate.*
+
 
 #### Insight
 
@@ -143,6 +169,17 @@ Focus on converting **Regular Customers and Potential Loyalists** into repeat pu
 
 <img width="1340" height="525" alt="newplot (25)" src="https://github.com/user-attachments/assets/565e89e7-ca23-4a1e-b3b8-1389d70a14c0" />
 
+#### Methodology
+
+Customers were classified according to actual purchase frequency.
+
+| Retention Segment | Criteria |
+|------------------|----------|
+| One-Time Buyer | 1 Purchase |
+| Returning Customer | 2–4 Purchases |
+| Loyal Customer | 5+ Purchases |
+
+The heatmap compares customer value segments against actual purchasing frequency behavior.
 
 #### Insight
 
@@ -159,6 +196,14 @@ Implement retention-focused initiatives such as personalized remarketing campaig
 
 <img width="1340" height="525" alt="newplot (26)" src="https://github.com/user-attachments/assets/c7a94bea-3743-4910-b58a-38665e81dd07" />
 
+
+#### Methodology
+
+- Product categories were ranked by total revenue generated.
+- Revenue contribution percentages were calculated for each category.
+- A cumulative revenue curve was created to determine how many categories generate 80% of marketplace revenue.
+
+
 #### Insight
 Revenue follows a classic Pareto distribution, with only 16 of 71 product categories generating approximately 80% of total marketplace revenue. These categories serve as the marketplace's primary revenue drivers and have a disproportionate impact on overall business performance.
 
@@ -170,6 +215,24 @@ Recommended Action: Focus promotional campaigns, inventory planning, and categor
 
 <img width="1340" height="525" alt="newplot (27)" src="https://github.com/user-attachments/assets/edd17a5c-9820-46e3-8e1e-e65fdef576a1" />
 
+
+#### Methodology
+
+Product categories were classified using:
+
+- Average Product Price
+- Total Units Sold
+
+Categories were segmented using median-based thresholds.
+
+| Segment | Characteristics |
+|----------|---------------|
+| Portfolio Star | High price, high volume |
+| Traffic Driver | Low price, high volume |
+| Premium Niche | High price, low volume |
+| Low Impact | Low price, low volume |
+
+Bubble size represents category revenue contribution.
 
 #### Insight
 
@@ -184,6 +247,14 @@ Prioritize inventory planning, promotional investment, and supplier partnerships
 
 <img width="1340" height="525" alt="newplot (28)" src="https://github.com/user-attachments/assets/6306dee4-b350-48d1-8e50-70dc9deee6b9" />
 
+
+#### Methodology
+
+Freight efficiency was calculated using:
+
+Freight-to-Price Ratio (%) = (Total Freight Cost ÷ Total Product Revenue) × 100
+
+Categories with higher ratios indicate a greater logistics burden relative to product value.
 
 #### Insight
 Freight costs consume a disproportionately large share of product value in several categories, with some categories allocating more than 25-35% of product price toward shipping expenses. This indicates that logistics costs can significantly erode profitability, particularly for bulky, low-priced, or difficult-to-ship products. Categories such as furniture, food, and electronics appear especially exposed to transportation cost pressures.
@@ -200,12 +271,14 @@ Review shipping strategies for high freight-ratio categories by optimizing packa
 
 <img width="1340" height="525" alt="newplot (29)" src="https://github.com/user-attachments/assets/2e8d1b9b-a8a2-4986-8b47-591922f89b01" />
 
-####  Methodology
+#### Methodology
 
-Revenue Contribution (%) =
-(State Revenue / Total Marketplace Revenue) × 100
+Seller revenue was aggregated by state and analyzed using:
 
-This metric measures each state's share of total marketplace revenue and helps identify geographic concentration within the seller network.
+- Total Revenue Contribution
+- Average Revenue per Seller
+
+This analysis evaluates both seller concentration and regional productivity.
 
 #### Insight
 Marketplace revenue is highly concentrated within a small number of states. São Paulo (SP) contributes approximately 64% of total marketplace revenue, significantly outperforming all other regions. The remaining states contribute comparatively smaller shares, highlighting a strong geographic concentration within the seller ecosystem.
@@ -220,6 +293,13 @@ Reduce geographic concentration risk by encouraging **seller acquisition and mar
 
 <img width="1340" height="525" alt="newplot (31)" src="https://github.com/user-attachments/assets/28f869dd-d871-4c66-96c2-baddf7aba291" />
 
+#### Methodology
+
+- Sellers were ranked by revenue contribution.
+- A cumulative revenue distribution curve was created.
+- The percentage of sellers required to generate 80% of total revenue was calculated.
+
+
 #### Insight
 
 Marketplace revenue is moderately concentrated among a relatively small group of sellers. Approximately 543 sellers (17.5% of all sellers) generate 80% of marketplace revenue, creating operational dependence on key vendors while maintaining broader seller participation.
@@ -229,6 +309,14 @@ Marketplace revenue is moderately concentrated among a relatively small group of
 ### Seller Category Specialization
 
 <img width="1340" height="525" alt="newplot (32)" src="https://github.com/user-attachments/assets/c39f82aa-cd63-464e-8f9b-888fed7788ee" />
+
+#### Methodology
+
+For each product category:
+
+- Revenue generated by the top-performing seller was identified.
+- The top seller's share of category revenue was calculated.
+- Categories were ranked according to seller dominance levels.
 
 
 #### Insight
